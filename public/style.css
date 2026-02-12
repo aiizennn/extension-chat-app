@@ -19,10 +19,9 @@ h1 {
   text-align: center;
   background: #0f172a;
   border-bottom: 1px solid #1e293b;
-  letter-spacing: 1px;
 }
 
-/* Messages Container */
+/* Messages Area */
 #messages {
   flex: 1;
   padding: 20px;
@@ -42,46 +41,48 @@ h1 {
   animation: fadeIn 0.2s ease-in-out;
 }
 
-/* Sender (Own message) */
+/* Own message */
 .self {
   align-self: flex-end;
-  background: #4ade80;   /* Parrot Green */
+  background: #4ade80;
   color: black;
   border-bottom-right-radius: 4px;
 }
 
-/* Others */
+/* Other message */
 .other {
   align-self: flex-start;
   background: #334155;
   border-bottom-left-radius: 4px;
 }
 
-/* Input Area */
+/* Input Container */
+.input-area {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  background: #0f172a;
+  border-top: 1px solid #1e293b;
+}
+
+/* Input */
 #message {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 120px;
+  flex: 1;
   padding: 12px 15px;
   border-radius: 25px;
   border: none;
   outline: none;
   background: #1e293b;
   color: white;
-  font-size: 14px;
 }
 
-/* Send Button */
+/* Button */
 #sendBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   padding: 12px 25px;
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  background: #4ade80; /* Parrot Green */
+  background: #4ade80;
   color: black;
   font-weight: 600;
   transition: 0.2s ease;
@@ -96,7 +97,6 @@ h1 {
   transform: scale(0.95);
 }
 
-/* Smooth Appearance */
 @keyframes fadeIn {
   from {
     opacity: 0;
