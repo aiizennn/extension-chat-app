@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Header */
+h1 {
+  padding: 20px;
+  text-align: center;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  letter-spacing: 1px;
+}
+
+/* Messages Container */
+#messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message Bubble */
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  font-size: 14px;
+  word-wrap: break-word;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Sender (Own message) */
+.self {
+  align-self: flex-end;
+  background: #4ade80;   /* Parrot Green */
+  color: black;
+  border-bottom-right-radius: 4px;
+}
+
+/* Others */
+.other {
+  align-self: flex-start;
+  background: #334155;
+  border-bottom-left-radius: 4px;
+}
+
+/* Input Area */
+#message {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 120px;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+  font-size: 14px;
+}
+
+/* Send Button */
+#sendBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: #4ade80; /* Parrot Green */
+  color: black;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#sendBtn:hover {
+  background: #22c55e;
+  transform: scale(1.05);
+}
+
+#sendBtn:active {
+  transform: scale(0.95);
+}
+
+/* Smooth Appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
